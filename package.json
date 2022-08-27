@@ -1,0 +1,14 @@
+{
+  "name": "graphql-acate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mrdouglasmorais/graphql-acate",
+  "author": "douglas.morais@i-value.com.br <douglas.morais@i-value.com.br>",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-core": "^3.10.2",
+    "apollo-server-express": "^3.10.2",
+    "express": "^4.18.1",
+    "graphql": "^16.6.0"
+  }
+}
