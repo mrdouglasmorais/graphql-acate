@@ -2,20 +2,30 @@
   "name": "graphql-acate",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/mrdouglasmorais/graphql-acate",
+  "repository": {
+    "type": "git",
+    "url" : "https://github.com/mrdouglasmorais/graphql-acate"
+  },
   "author": "douglas.morais@i-value.com.br <douglas.morais@i-value.com.br>",
   "license": "MIT",
-  "dependencies": {
-    "apollo-server-core": "^3.10.2",
-    "apollo-server-express": "^3.10.2",
-    "apollo-server-lambda": "^3.10.2",
-    "express": "^4.18.1",
-    "graphql": "^16.6.0"
-  },
   "scripts": {
-    "start": ""
+    "offline": "serverless offline start",
+    "watch": "tsc -w",
+    "deploy": "sls deploy",
+    "test": "jest"
+  },
+  "engines": {
+    "node": "16.x"
   },
   "devDependencies": {
-    "typescript": "^4.8.2"
+    "@types/aws-lambda": "^8.10.64",
+    "@types/jest": "^26.0.14",
+    "serverless-bundle": "3.2.1",
+    "serverless-dotenv-plugin": "^2.1.1",
+    "serverless-offline": "^6.8.0"
+  },
+  "dependencies": {
+    "apollo-server-lambda": "^2.16.0",
+    "graphql": "^14.5.8"
   }
 }
