@@ -22,7 +22,7 @@ custom:
 
 provider:
   name: aws
-  runtime: nodejs16.x
+  runtime: nodejs12.x
   stage: ${self:provider.environment.stage}
   region: eu-west-1
   profile: personalAccount
