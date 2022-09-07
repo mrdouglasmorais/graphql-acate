@@ -1,5 +1,5 @@
 # NOTE: update this with your service name
-service: graphql-acate
+service: lambdagraphql
 
 # Use the serverless-webpack plugin to transpile ES6
 package:
@@ -14,7 +14,7 @@ plugins:
 # serverless-webpack configuration
 # Enable auto-packing of external modules
 custom:
-  stage: ${opt:stage, self:provider.stage}
+  stage: dev
   serverless-offline:
     port: 4000
   bundle:
@@ -23,7 +23,7 @@ custom:
 provider:
   name: aws
   runtime: nodejs12.x
-  stage: ${self:provider.environment.stage}
+  stage: dev
   region: eu-west-1
   profile: personalAccount
   # To load environment variables externally
@@ -34,8 +34,8 @@ provider:
   #environment: ${file(env.yml):${self:provider.stage}}
 
   environment:
-    stage: ${env:stage}
-    region: ${self:provider.region}
+    stage: dev
+    region: dev
 
 functions:
   graphql:

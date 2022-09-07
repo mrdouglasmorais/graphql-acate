@@ -4,7 +4,7 @@ import { Context, Callback, APIGatewayEvent } from "aws-lambda"
 import { schema } from "./schema";
 import { resolvers } from "./resolvers";
 
-//const typeDef: ITypeDefinitions = schema
+const typeDef: ITypeDefinitions = schema
 const server = new ApolloServer({
 	typeDefs: schema,
 	resolvers: resolvers,
@@ -28,7 +28,7 @@ exports.graphqlHandler = (event: APIGatewayEvent, context: Context, callback: Ca
 	const handler = server.createHandler({
 		cors: {
 			origin: "*",
-			credentials: true,
+			credentials: false,
 			methods: ["POST", "GET"],
 			allowedHeaders: ["Content-Type", "Origin", "Accept"]
 		}
