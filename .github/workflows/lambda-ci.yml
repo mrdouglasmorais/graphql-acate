@@ -1,7 +1,10 @@
 name: deploy to lambda
-on: [push]
-jobs:
+on:
+  push: 
+    branches:
+      - main
 
+jobs:
   deploy_zip:
     name: deploy lambda function
     runs-on: ubuntu-latest
